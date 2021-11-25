@@ -16,7 +16,7 @@
         android:text="@string/owner_mode_false"
         android:textSize="18sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tvWifiStats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/wifi_stats_off"
-        android:textSize="18sp" />
+        android:textSize="18sp" />-->
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -9,7 +9,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MainViewModel extends ViewModel {
+/*public class MainViewModel extends ViewModel {
 
     MutableLiveData<Boolean> wifiStatsLiveData = new MutableLiveData<>();
 
@@ -33,4 +33,4 @@ public class MainViewModel extends ViewModel {
     public void removeObservers(LifecycleOwner owner) {
         wifiStatsLiveData.removeObservers(owner);
     }
-}
+}*/

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private PrefsHelper prefsHelper;
 
     private ActivityMainBinding binding;
-    private MainViewModel viewModel;
+    //private MainViewModel viewModel;
 
     public static MainActivity current;
     DevicePolicyManager mDevicePolicyManager;
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        //viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         mDevicePolicyManager = (DevicePolicyManager) getSystemService(DEVICE_POLICY_SERVICE);
 
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             binding.btnLockDevice.setText(getString(R.string.title_set_admin));
         }
 
-        viewModel.wifiStatsLiveData.observe(this, data -> {
+        /*viewModel.wifiStatsLiveData.observe(this, data -> {
             if (data) {
                 binding.tvWifiStats.setText(getString(R.string.wifi_stats_on));
                 binding.tvWifiStats.setTextColor(Color.GREEN);
@@ -160,13 +160,13 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvWifiStats.setText(getString(R.string.wifi_stats_off));
                 binding.tvWifiStats.setTextColor(Color.RED);
             }
-        });
+        });*/
 
         if (prefsHelper.isLocked) {
             enableLockMode();
         }
 
-        viewModel.subscribeForWifiStats(this);
+        //viewModel.subscribeForWifiStats(this);
     }
 
     Handler handler = new Handler();
@@ -278,6 +278,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         current = null;
-        viewModel.removeObservers(this);
+        //viewModel.removeObservers(this);
     }
 }
